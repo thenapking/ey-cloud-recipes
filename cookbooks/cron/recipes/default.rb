@@ -8,7 +8,7 @@ crons = node[:custom_crons].find_all {|c| c[:instance_name].match "#{node[:name]
 
 crons.each do |cron|
   cron cron[:name] do
-    user     node['owner_name']
+    user     'root' #node['owner_name']
     action   :create
     minute   cron[:time].split[0]
     hour     cron[:time].split[1]

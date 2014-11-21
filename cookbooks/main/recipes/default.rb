@@ -1,4 +1,4 @@
-include_recipe "mysql_cron_job"
+#include_recipe "mysql_cron_job"
 #execute "testing" do
 #  command %Q{
 #    echo "i ran at #{Time.now}" >> /root/cheftime
@@ -52,7 +52,7 @@ include_recipe "mysql_cron_job"
 
 #uncomment to add specified cron jobs for application user (deploy)
 # You must add your cron jobs to cron/attributes/cron.rb
-#require_recipe "cron"
+require_recipe "cron"
 
 #uncomment to run the exim::auth recipe
 #include_recipe "exim::auth"
