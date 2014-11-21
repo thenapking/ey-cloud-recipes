@@ -1,3 +1,4 @@
+include_recipe "mysql_cron_job"
 #execute "testing" do
 #  command %Q{
 #    echo "i ran at #{Time.now}" >> /root/cheftime
